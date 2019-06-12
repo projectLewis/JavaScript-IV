@@ -44,7 +44,14 @@ class Students extends Person {
 }
 class ProjectManagers extends Instructors {
   constructor(pName, pAge, pLocal, pSpecialty, pFavLanguage, pCatchPhrase, gradClassName, favInstructor) {
-
+    super(pName, pAge, pLocal, pSpecialty, pFavLanguage, pCatchPhrase);
+    this.gradClassName = gradClassName;
+    this.favInstructor = favInstructor;
   }
-
+  standUp(channel) {
+    return `${ this.name } announces to ${ channel }, @channel standy times!`;
+  }
+  debugsCode(student, subject) {
+    return `${ this.name } debugs ${ student.name }'s code on ${ subject }`;
+  }
 }
