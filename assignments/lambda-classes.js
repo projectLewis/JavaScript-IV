@@ -36,9 +36,11 @@ class Students extends Person {
     this.grade = grade;
   }
   listSubjects() {
+    const favArr = [];
     this.favSubjects.forEach((el) => {
-      return `${ el }`;
+      favArr.push(el)
     });
+    return favArr;
   }
   PRAssignment(subject) {
     return `${ this.name } has submitted a PR for ${ subject }`;
@@ -152,3 +154,10 @@ const rios = new ProjectManagers(
   "Web0",
   "Big Mike"
 )
+console.log(shakur.location);
+console.log(rios.standUp("web27"));
+console.log(wallace.debugsCode(bigWill, "javascript"));
+console.log(bigWill.listSubjects());
+console.log(lilWill.standUp("web27"));
+console.log(will.debugsCode(bigWill, "javascript"));
+console.log(bigWill.location);
