@@ -103,7 +103,7 @@ const bigWill = new Students(
   "Scotland",
   "tv star",
   "web27",
-  "CSS",
+  ["React", "CSS", "SQL"],
   68
 )
 const lilWill = new Students(
@@ -112,7 +112,7 @@ const lilWill = new Students(
   "France",
   "tv star",
   "web27",
-  "HTML",
+  ["Node", "Computer Science", "Javascript"],
   85
 )
 const will = new Students(
@@ -121,7 +121,7 @@ const will = new Students(
   "Spain",
   "TV star",
   "web27",
-  "Javascript",
+  ["front end", "back end", "databases"],
   97
 )
 const shakur = new ProjectManagers(
@@ -158,6 +158,6 @@ console.log(shakur.location);
 console.log(rios.standUp("web27"));
 console.log(wallace.debugsCode(bigWill, "javascript"));
 console.log(bigWill.listSubjects());
-console.log(lilWill.standUp("web27"));
-console.log(will.debugsCode(bigWill, "javascript"));
-console.log(bigWill.location);
+console.log(lilWill.PRAssignment("CSS"));
+console.log(will.sprintChallenge("React"));
+console.log(bigWill.graduate());
