@@ -24,7 +24,7 @@ class Instructors extends Person {
   }
   adjustGrade(student) {
     student.grade = Math.floor((Math.random() * 100) + 1);
-    return student.grade;
+    return `${ this.name } has graded some more assignments. ${ student.name }'s new grade is ${ student.grade }`;
   }
 }
 class Students extends Person {
@@ -50,10 +50,10 @@ class Students extends Person {
   }
   graduate() {
     if (this.grade >= 70) {
-      return `CONGRATULATIONS!!! ${ this.name } you are eligible for graduation!`;
+      return `CONGRATULATIONS!!! ${ this.name } you are eligible for graduation! Your grade on course completion was ${ this.grade }`;
     }
     else {
-      return `Sorry, ${ this.name } not quite ready for graduation yet. Keep studying and pull those grades up.`;
+      return `Sorry, ${ this.name } not quite ready for graduation yet. Your current grade is ${ this.grade }. Keep studying and pull those grades up.`;
     }
   }
 }
@@ -127,7 +127,7 @@ const will = new Students(
 const shakur = new ProjectManagers(
   "Mr. Shakur",
   "24",
-  "West Coast",
+  "the West Coast",
   "machine learning",
   "Python",
   "PM LIFE!",
@@ -154,7 +154,12 @@ const rios = new ProjectManagers(
   "Web0",
   "Big Mike"
 )
-console.log(shakur.location);
+
+// console.log tests below
+console.log(bigMike.demo(bigMike.specialty));
+console.log(lilMike.adjustGrade(bigWill));
+console.log(mike.grade(will, "testing"));
+console.log(shakur.speak());
 console.log(rios.standUp("web27"));
 console.log(wallace.debugsCode(bigWill, "javascript"));
 console.log(bigWill.listSubjects());
