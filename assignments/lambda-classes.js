@@ -108,87 +108,69 @@ class ProjectManagers extends Instructors {
 
 /// Test Personnel
 
-const bigMike = new Instructors(
-  "Big Mike",
-  30,
-  "new guinea",
-  "Go Lang",
-  "Rust",
-  "Wait this is a Web Dev course??"
-)
-const lilMike = new Instructors(
-  "Lil Mike",
-  15,
-  "Egypt",
-  "backend",
-  "C#",
-  "Yes, I am a child prodigy..."
-)
-const mike = new Instructors(
-  "Mike",
-  42,
-  "New Mexico",
-  "frontend",
-  "Javascript",
-  "No I'm the real Mike!!"
-)
-const bigWill = new Students(
-  "Big Will",
-  22,
-  "Scotland",
-  "tv star",
-  "web27",
-  ["React", "CSS", "SQL"],
-  68
-)
-const lilWill = new Students(
-  "Lil Will",
-  28,
-  "France",
-  "tv star",
-  "web27",
-  ["Node", "Computer Science", "Javascript"],
-  85
-)
-const will = new Students(
-  "Will",
-  24,
-  "Spain",
-  "TV star",
-  "web27",
-  ["front end", "back end", "databases"],
-  97
-)
-const shakur = new ProjectManagers(
-  "Mr. Shakur",
-  "24",
-  "the West Coast",
-  "machine learning",
-  "Python",
-  "PM LIFE!",
-  "Web0",
-  "Big Mike"
-)
-const wallace = new ProjectManagers(
-  "Mr. Shakur",
-  "23",
-  "Brooklyn",
-  "web development",
-  "Typescript",
-  "Where Brooklyn at!?",
-  "Web0",
-  "Big Mike"
-)
-const rios = new ProjectManagers(
-  "Mr. Rios",
-  "27",
-  "The Bronx",
-  "Node",
-  "Javscript",
-  "I'm not a PM, I just grade a lot.",
-  "Web0",
-  "Big Mike"
-)
+const bigMike = new Instructors("Big Mike")
+  .setAge(30)
+  .setLocation("new guinea")
+  .setSpecialty("Go Lang")
+  .setFavLanguage("Rust")
+  .setCatchPhrase("Wait this is a Web Dev course??");
+const lilMike = new Instructors("Lil Mike")
+  .setAge(15)
+  .setLocation("Egypt")
+  .setSpecialty("backend")
+  .setFavLanguage("C#")
+  .setCatchPhrase("Yes, I am a child prodigy...");
+const mike = new Instructors("Mike")
+  .setAge(42)
+  .setLocation("New Mexico")
+  .setSpecialty("frontend")
+  .setFavLanguage("Javascript")
+  .setCatchPhrase("No I'm the real Mike!!");
+const bigWill = new Students("Big Will")
+  .setAge(22)
+  .setLocation("Scotland")
+  .setPreviousBackground("tv star")
+  .setClassName("web27")
+  .setFavSubject(["React", "CSS", "SQL"])
+  .setGrade(68);
+const lilWill = new Students("Lil Will")
+  .setAge(28)
+  .setLocation("France")
+  .setPreviousBackground("tv star")
+  .setClassName("web27")
+  .setFavSubject(["Node", "Computer Science", "Javascript"])
+  .setGrade(85);
+const will = new Students("Will")
+  .setAge(24)
+  .setLocation("Spain")
+  .setPreviousBackground("TV star")
+  .setClassName("web27")
+  .setFavSubject(["front end", "back end", "databases"])
+  .setGrade(97);
+const shakur = new ProjectManagers("Mr. Shakur")
+  .setAge(24)
+  .setLocation("the West Coast")
+  .setSpecialty("machine learning")
+  .setFavLanguage("Python")
+  .setCatchPhrase("PM LIFE!")
+  .setGradClassName("Web0")
+  .setFavInstructor("Big Mike");
+const wallace = new ProjectManagers("Mr. Shakur")
+  .setAge(23)
+  .setLocation("Brooklyn")
+  .setSpecialty("web development")
+  .setFavLanguage("Typescript")
+  .setCatchPhrase("Where Brooklyn at!?")
+  .setGradClassName("Web0")
+  .setFavInstructor("Big Mike");
+const rios = new ProjectManagers("Mr. Rios")
+  .setAge(27)
+  .setLocation("The Bronx")
+  .setSpecialty("Node")
+  .setFavLanguage("Javscript")
+  .setCatchPhrase("I'm not a PM, I just grade a lot.")
+  .setGradClassName("Web0")
+  .setFavInstructor("Big Mike");
 
 // console.log tests below
 console.log(bigMike.demo(bigMike.specialty));
