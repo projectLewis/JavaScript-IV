@@ -10,8 +10,8 @@ class Person {
   }
 }
 class Instructors extends Person {
-  constructor(iName, iAge, iLocal, specialty, favLanguage, catchPhrase) {
-    super(iName, iAge, iLocal);
+  constructor(name, age, location, specialty, favLanguage, catchPhrase) {
+    super(name, age, location);
     this.specialty = specialty;
     this.favLanguage = favLanguage;
     this.catchPhrase = catchPhrase;
@@ -28,8 +28,8 @@ class Instructors extends Person {
   }
 }
 class Students extends Person {
-  constructor(sName, sAge, sLocal, previousBackground, className, favSubjects, grade) {
-    super(sName, sAge, sLocal);
+  constructor(name, age, location, previousBackground, className, favSubjects, grade) {
+    super(name, age, location);
     this.previousBackground = previousBackground;
     this.className = className;
     this.favSubjects = favSubjects;
@@ -58,8 +58,8 @@ class Students extends Person {
   }
 }
 class ProjectManagers extends Instructors {
-  constructor(pName, pAge, pLocal, pSpecialty, pFavLanguage, pCatchPhrase, gradClassName, favInstructor) {
-    super(pName, pAge, pLocal, pSpecialty, pFavLanguage, pCatchPhrase);
+  constructor(name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor) {
+    super(name, age, location, specialty, favLanguage, catchPhrase);
     this.gradClassName = gradClassName;
     this.favInstructor = favInstructor;
   }
