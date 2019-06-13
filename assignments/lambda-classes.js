@@ -7,7 +7,7 @@ class Person {
     this.age = age;
     return this;
   }
-  setLocation(age) {
+  setLocation(location) {
     this.location = location;
     return this;
   }
@@ -86,9 +86,7 @@ class Students extends Person {
 }
 class ProjectManagers extends Instructors {
   constructor(name) {
-    super(name, favLanguage, catchPhrase);
-    this.gradClassName = gradClassName;
-    this.favInstructor = favInstructor;
+    super(name);
   }
   setGradClassName(gradClassName) {
     this.gradClassName = gradClassName;
