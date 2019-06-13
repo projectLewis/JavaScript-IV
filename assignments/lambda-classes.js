@@ -1,20 +1,35 @@
 // See README for detailed instructions
 class Person {
-  constructor(name, age, location) {
+  constructor(name) {
     this.name = name;
+  }
+  setAge(age) {
     this.age = age;
+    return this;
+  }
+  setLocation(age) {
     this.location = location;
+    return this;
   }
   speak() {
     return `Hello my name is ${ this.name }, I am from ${ this.location }`;
   }
 }
 class Instructors extends Person {
-  constructor(name, age, location, specialty, favLanguage, catchPhrase) {
-    super(name, age, location);
+  constructor(name) {
+    super(name);
+  }
+  setSpecialty(specialty) {
     this.specialty = specialty;
+    return this;
+  }
+  setFavLanguage(favLanguage) {
     this.favLanguage = favLanguage;
+    return this;
+  }
+  setCatchPhrase(catchPhrase) {
     this.catchPhrase = catchPhrase;
+    return this;
   }
   demo(subject) {
     return `Today we are learning about ${ subject }`;
@@ -28,12 +43,24 @@ class Instructors extends Person {
   }
 }
 class Students extends Person {
-  constructor(name, age, location, previousBackground, className, favSubjects, grade) {
-    super(name, age, location);
+  constructor(name) {
+    super(name);
+  }
+  setPreviousBackground(previousBackground) {
     this.previousBackground = previousBackground;
+    return this;
+  }
+  setClassName(className) {
     this.className = className;
+    return this;
+  }
+  setFavSubject(favSubjects) {
     this.favSubjects = favSubjects;
+    return this;
+  }
+  setGrade(grade) {
     this.grade = grade;
+    return this;
   }
   listSubjects() {
     const favArr = [];
@@ -58,10 +85,18 @@ class Students extends Person {
   }
 }
 class ProjectManagers extends Instructors {
-  constructor(name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor) {
-    super(name, age, location, specialty, favLanguage, catchPhrase);
+  constructor(name) {
+    super(name, favLanguage, catchPhrase);
     this.gradClassName = gradClassName;
     this.favInstructor = favInstructor;
+  }
+  setGradClassName(gradClassName) {
+    this.gradClassName = gradClassName;
+    return this;
+  }
+  setFavInstructor(favInstructor) {
+    this.favInstructor = favInstructor;
+    return this;
   }
   standUp(channel) {
     return `${ this.name } announces to ${ channel }, @channel standy times!`;
